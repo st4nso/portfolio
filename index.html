@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Fotográfico - Lucas Stanso</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      height: 100vh;
+      background: url('intro.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    header h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+    }
+    header .contato-topo {
+      position: absolute;
+      bottom: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+    nav {
+      background: #111;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    h2 {
+      color: #ccc;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+    .duas-colunas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    footer {
+      background: #111;
+      color: #777;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+</head>
+<body>
+
+  <header id="intro">
+    <h1 style="font-family: 'Times New Roman', serif; color: red;">Lucas Stanso</h1>
+<h2 style="font-family: 'Calisto MT', serif;">Portfólio Fotográfico</h2>
+    <div class="contato-topo">
+      Instagram: @_stanso • WhatsApp: +55 13 99682-7109
+    </div>
+  </header>
+
+  <nav>
+    <a href="#editorial1">Retratos Urbanos</a>
+    <a href="#editorial2">Paisagens</a>
+    <a href="#editorial3">Editorial Experimental</a>
+  </nav>
+
+  <section id="editorial1">
+    <h2>Retratos Urbanos</h2>
+    <div class="galeria">
+      <a href="retratos1.jpg" data-lightbox="galeria"><img src="retratos1.jpg" alt="Retrato urbano 1"></a>
+      <a href="retratos2.jpg" data-lightbox="galeria"><img src="retratos2.jpg" alt="Retrato urbano 2"></a>
+      <a href="retratos3.jpg" data-lightbox="galeria"><img src="retratos3.jpg" alt="Retrato urbano 3"></a>
+      <a href="retratos4.jpg" data-lightbox="galeria"><img src="retratos4.jpg" alt="Retrato urbano 4"></a>
+    </div>
+  </section>
+
+  <section id="editorial2">
+    <h2>Paisagens</h2>
+    <div class="duas-colunas">
+      <a href="paisagem1.jpg" data-lightbox="galeria"><img src="paisagem1.jpg" alt="Paisagem 1"></a>
+      <a href="paisagem2.jpg" data-lightbox="galeria"><img src="paisagem2.jpg" alt="Paisagem 2"></a>
+    </div>
+    <div class="galeria">
+      <a href="paisagem3.jpg" data-lightbox="galeria"><img src="paisagem3.jpg" alt="Paisagem 3"></a>
+      <a href="paisagem4.jpg" data-lightbox="galeria"><img src="paisagem4.jpg" alt="Paisagem 4"></a>
+    </div>
+  </section>
+
+  <section id="editorial3">
+    <h2>Editorial Experimental</h2>
+    <div class="galeria">
+      <a href="experimental1.jpg" data-lightbox="galeria"><img src="experimental1.jpg" alt="Experimental 1"></a>
+      <a href="experimental2.jpg" data-lightbox="galeria"><img src="experimental2.jpg" alt="Experimental 2"></a>
+      <a href="experimental3.jpg" data-lightbox="galeria"><img src="experimental3.jpg" alt="Experimental 3"></a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Lucas Stanso. Todos os direitos reservados. <br>
+    Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a> • WhatsApp: <a href="https://wa.me/5513996827109" target="_blank">+55 13 99682-7109</a>
+  
+<section id="lain-series">
+<h2>Lain Series</h2>
+<div class="galeria">
+  <a href="lain_series/lain1.jpg" data-lightbox="galeria"><img src="lain_series/lain1.jpg" alt="lain1.jpg"></a>
+  <a href="lain_series/lain2.jpg" data-lightbox="galeria"><img src="lain_series/lain2.jpg" alt="lain2.jpg"></a>
+  <a href="lain_series/lain3.jpg" data-lightbox="galeria"><img src="lain_series/lain3.jpg" alt="lain3.jpg"></a>
+  <a href="lain_series/lain4.jpg" data-lightbox="galeria"><img src="lain_series/lain4.jpg" alt="lain4.jpg"></a>
+  <a href="lain_series/lain5.jpg" data-lightbox="galeria"><img src="lain_series/lain5.jpg" alt="lain5.jpg"></a>
+  <a href="lain_series/lain6.jpg" data-lightbox="galeria"><img src="lain_series/lain6.jpg" alt="lain6.jpg"></a>
+  <a href="lain_series/lain7.jpg" data-lightbox="galeria"><img src="lain_series/lain7.jpg" alt="lain7.jpg"></a>
+</div>
+</section>
+
+
+<section id="night-life">
+  <h2>Night Life</h2>
+  <div class="galeria">
+    <a href="night1.jpg" data-lightbox="galeria"><img src="night1.jpg" alt="Night 1"></a>
+    <a href="night2.jpg" data-lightbox="galeria"><img src="night2.jpg" alt="Night 2"></a>
+  </div>
+</section>
+
+<section id="navii">
+  <h2>Navii</h2>
+  <div class="galeria">
+    <a href="navii1.jpg" data-lightbox="galeria"><img src="navii1.jpg" alt="Navii 1"></a>
+    <a href="navii2.jpg" data-lightbox="galeria"><img src="navii2.jpg" alt="Navii 2"></a>
+  </div>
+</section>
+
+<section id="cianotype">
+  <h2>Cianotype</h2>
+  <div class="galeria">
+    <a href="ciano1.jpg" data-lightbox="galeria"><img src="ciano1.jpg" alt="Ciano 1"></a>
+    <a href="ciano2.jpg" data-lightbox="galeria"><img src="ciano2.jpg" alt="Ciano 2"></a>
+  </div>
+</section>
+
+<section id="visual-expressions">
+  <h2>Visual Expressions</h2>
+  <div class="galeria">
+    <a href="ve1.jpg" data-lightbox="galeria"><img src="ve1.jpg" alt="Visual Expression 1"></a>
+    <a href="ve2.jpg" data-lightbox="galeria"><img src="ve2.jpg" alt="Visual Expression 2"></a>
+  </div>
+</section>
+
+</footer>
+
+</body>
+</html>

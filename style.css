@@ -2,38 +2,38 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #000; /* Fundo preto */
-    color: #ccc; /* Cor de texto padrão visível no fundo escuro */
-    line-height: 1.6; /* Melhora a legibilidade do texto */
-    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+    background-color: #000;
+    color: #ccc;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
-    color: #ccc; /* Cor padrão dos links */
+    color: #ccc;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: red; /* Cor de destaque para links no hover */
+    color: red;
 }
 
 /* Navegação */
 nav {
     background: #111;
     text-align: center;
-    padding: 15px 0; /* Espaçamento superior e inferior para a navegação */
-    position: sticky; /* Fixa a navegação no topo ao rolar */
+    padding: 15px 0;
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Garante que a navegação fique acima de outros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para destacar a barra de navegação */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav a {
-    margin: 0 18px; /* Espaçamento entre os itens da navegação */
+    margin: 0 18px;
     font-weight: bold;
-    font-size: 1.05rem; /* Levemente maior */
-    white-space: nowrap; /* Evita quebra de linha em telas pequenas */
+    font-size: 1.05rem;
+    white-space: nowrap;
 }
 
 /* Header (Cabeçalho principal) */
@@ -47,59 +47,57 @@ header {
     text-align: center;
     color: #fff;
     position: relative;
-    /* Adiciona um overlay escuro para a imagem de fundo, melhorando a legibilidade do texto */
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
-    font-size: 8rem; /* Tamanho do nome */
+    font-size: 8rem;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 0 20px; /* Adiciona padding horizontal */
-    color: red; /* Cor do nome */
-    margin-bottom: 10px; /* Espaçamento entre o nome e o subtítulo */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o texto do nome */
+    padding: 0 20px;
+    color: red;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 header h2 {
-    font-size: 3rem; /* Tamanho do subtítulo */
-    color: red; /* Cor do subtítulo */
-    margin-top: 0; /* Remove margem superior padrão */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para o texto do subtítulo */
+    font-size: 3rem;
+    color: red;
+    margin-top: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 header .contato-topo {
     position: absolute;
-    bottom: 25px; /* Ajusta a posição vertical */
-    background: rgba(0, 0, 0, 0.75); /* Fundo mais escuro */
-    padding: 12px 25px; /* Mais padding */
-    border: 1px solid #444; /* Borda mais discreta */
-    font-size: 0.95rem; /* Levemente maior */
-    border-radius: 5px; /* Cantos arredondados */
+    bottom: 25px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 12px 25px;
+    border: 1px solid #444;
+    font-size: 0.95rem;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header .contato-topo a {
-    color: #fff; /* Links brancos no contato topo */
+    color: #fff;
     font-weight: normal;
 }
 
 header .contato-topo a:hover {
-    color: red; /* Destaque em vermelho no hover */
+    color: red;
 }
 
 /* Seções */
 section {
-    padding: 80px 20px; /* Mais padding para separar as seções */
-    background-color: #0d0d0d; /* Fundo ligeiramente diferente para as seções */
-    border-bottom: 1px solid #222; /* Linha divisória sutil entre seções */
-    position: relative; /* Necessário para posicionamento de elementos filhos */
-    /* Estilos base para imagem de fundo em todas as seções */
+    padding: 80px 20px;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #222;
+    position: relative;
     background-position: center;
-    background-size: cover; /* Garante que a imagem preencha a seção */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Opcional: faz o fundo "parar" enquanto o conteúdo rola */
-    min-height: 60vh; /* Altura mínima para ver a imagem de fundo */
+    background-attachment: fixed;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +105,6 @@ section {
     text-align: center;
 }
 
-/* Overlay para todas as seções */
 section::before {
     content: '';
     position: absolute;
@@ -115,30 +112,28 @@ section::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Overlay escuro */
-    z-index: 1; /* Garante que o overlay fique abaixo do conteúdo */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-/* Conteúdo das seções deve estar acima do overlay */
 section > * {
     position: relative;
     z-index: 2;
 }
 
 section:last-of-type {
-    border-bottom: none; /* Remove a borda da última seção */
+    border-bottom: none;
 }
 
 h2 {
-    color: #e0e0e0; /* Cor dos títulos das seções */
-    font-size: 4.5rem; /* Tamanho ajustado para títulos de seção */
-    margin-bottom: 50px; /* Mais espaço abaixo do título */
+    color: #e0e0e0;
+    font-size: 4.5rem;
+    margin-bottom: 50px;
     font-weight: 700;
     text-align: center;
-    text-transform: uppercase; /* Deixa os títulos em maiúsculas */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra para destacar o texto sobre o fundo */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-
 
 /* Imagens de fundo para cada seção da página inicial (index.html) */
 #lain-series-home {
@@ -161,14 +156,13 @@ h2 {
     background-image: url('ve1.JPG');
 }
 
-
-/* Estilos para a seção Lain Series na página inicial, agora mais genérica */
+/* --- ESTILOS PARA AS PRÉ-VISUALIZAÇÕES NA PÁGINA INICIAL --- */
 .gallery-preview-section {
     padding: 80px 20px;
-    background-color: transparent; /* A imagem de fundo agora é na seção */
+    background-color: transparent;
     border-bottom: 1px solid #222;
     text-align: center;
-    min-height: 70vh; /* Aumenta a altura mínima para destacar o fundo */
+    min-height: 70vh;
 }
 
 .gallery-preview-link {
@@ -219,8 +213,7 @@ h2 {
     opacity: 1;
 }
 
-/* --- Estilos para as Páginas de Galeria Completas com rolagem horizontal (ex: lain.html, palato.html) --- */
-
+/* --- ESTILOS PARA AS PÁGINAS DE GALERIA COMPLETAS (com rolagem horizontal) --- */
 .back-link {
     margin-top: -30px;
     margin-bottom: 40px;
@@ -242,18 +235,18 @@ h2 {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    padding: 0 20px;
+    padding: 30px 20px; /* --- ALTERAÇÃO: Adicionado padding superior para espaço abaixo do título --- */
     gap: 15px;
     max-width: 100%;
     margin: 0 auto 80px auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: red black;
+    /* --- ALTERAÇÃO: Removida a cor da scrollbar --- */
+    scrollbar-width: thin; /* Mantém para Firefox, mas sem cor definida */
 }
 
 .galeria-full-page::-webkit-scrollbar {
-    display: none;
+    display: none; /* --- ALTERAÇÃO: Oculta a scrollbar para navegadores WebKit (Chrome, Safari) --- */
 }
 
 .galeria-full-page a {
@@ -264,6 +257,9 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
+    background-color: #fff; /* --- ALTERAÇÃO: Fundo branco para as miniaturas --- */
+    padding: 5px; /* --- Opcional: Adiciona um pequeno padding dentro do fundo branco --- */
+    box-sizing: border-box; /* --- Garante que o padding não aumente o tamanho do elemento --- */
 }
 
 .galeria-full-page a:hover {
@@ -302,182 +298,61 @@ footer a {
 
 /* --- Media Queries para Responsividade --- */
 
-/* Telas até 1024px (Tablets em modo paisagem e alguns desktops menores) */
+/* Telas até 1024px */
 @media (max-width: 1024px) {
-    header h1 {
-        font-size: 6rem;
-    }
-    header h2 {
-        font-size: 2.5rem;
-    }
-    h2 { /* Títulos de seção */
-        font-size: 3.8rem;
-    }
-    section {
-        min-height: 50vh; /* Altura mínima ajustada */
-    }
-    .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-    }
-    .galeria a {
-        height: 200px; /* Altura ajustada */
-    }
-    .galeria-full-page a {
-        height: 250px;
-    }
-    .gallery-preview-section {
-        min-height: 60vh; /* Ajuste para a prévia da galeria */
-    }
-    .gallery-preview-link img {
-        height: 350px;
-    }
-    .preview-overlay {
-        font-size: 2rem;
-    }
+    header h1 { font-size: 6rem; }
+    header h2 { font-size: 2.5rem; }
+    h2 { font-size: 3.8rem; }
+    section { min-height: 50vh; }
+    .galeria-full-page a { height: 250px; }
+    .gallery-preview-section { min-height: 60vh; }
+    .gallery-preview-link img { height: 350px; }
+    .preview-overlay { font-size: 2rem; }
 }
 
-/* Telas até 768px (Tablets em modo retrato, smartphones grandes) */
+/* Telas até 768px */
 @media (max-width: 768px) {
-    header {
-        height: 70vh;
-    }
-    header h1 {
-        font-size: 4rem;
-        padding: 0 10px;
-    }
-    header h2 {
-        font-size: 1.8rem;
-    }
-    header .contato-topo {
-        bottom: 20px;
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-    nav {
-        padding: 10px 0;
-    }
-    nav a {
-        margin: 0 10px;
-        font-size: 0.9rem;
-    }
-    h2 { /* Títulos de seção */
-        font-size: 2.8rem;
-        margin-bottom: 30px;
-    }
-    section {
-        padding: 50px 15px;
-        min-height: 40vh; /* Altura mínima para mobile */
-    }
-    .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-        padding: 0 10px;
-    }
-    .galeria a {
-        height: 150px; /* Altura menor para miniaturas */
-        padding: 0px; /* Removido padding */
-    }
-    .galeria-full-page {
-        padding: 0 10px;
-        gap: 10px;
-    }
-    .galeria-full-page a {
-        height: 200px;
-    }
-    .gallery-preview-section {
-        min-height: 50vh; /* Ajuste para a prévia da galeria */
-    }
-    .gallery-preview-link img {
-        height: 250px;
-    }
-    .preview-overlay {
-        font-size: 1.6rem;
-    }
-    .back-link {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
+    header { height: 70vh; }
+    header h1 { font-size: 4rem; padding: 0 10px; }
+    header h2 { font-size: 1.8rem; }
+    header .contato-topo { bottom: 20px; font-size: 0.9rem; padding: 10px 20px; }
+    nav { padding: 10px 0; }
+    nav a { margin: 0 10px; font-size: 0.9rem; }
+    h2 { font-size: 2.8rem; margin-bottom: 30px; }
+    section { padding: 50px 15px; min-height: 40vh; }
+    .galeria-full-page { padding: 30px 10px; gap: 10px; } /* --- Ajuste de padding --- */
+    .galeria-full-page a { height: 200px; }
+    .gallery-preview-section { min-height: 50vh; }
+    .gallery-preview-link img { height: 250px; }
+    .preview-overlay { font-size: 1.6rem; }
+    .back-link { font-size: 1rem; margin-bottom: 30px; }
 }
 
-/* Telas até 480px (Smartphones pequenos) */
+/* Telas até 480px */
 @media (max-width: 480px) {
-    header {
-        height: 60vh;
-    }
-    header h1 {
-        font-size: 2.5rem;
-    }
-    header h2 {
-        font-size: 1.1rem;
-    }
-    header .contato-topo {
-        bottom: 10px;
-        font-size: 0.75rem;
-        padding: 8px 15px;
-    }
-    nav {
-        padding: 8px 0;
-    }
-    nav a {
-        margin: 0 6px;
-        font-size: 0.8rem;
-        white-space: normal;
-    }
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-    section {
-        padding: 30px 10px;
-        min-height: 35vh;
-    }
-    .galeria, .galeria-full-page {
-        gap: 10px;
-        padding: 0 5px;
-    }
-    .galeria a, .galeria-full-page a {
-        height: 180px;
-        padding: 0px; /* Removido padding */
-    }
-    .gallery-preview-section {
-        min-height: 40vh;
-    }
-    .gallery-preview-link img {
-        height: 200px;
-    }
-    .preview-overlay {
-        font-size: 1.2rem;
-    }
-    .back-link {
-        font-size: 0.85rem;
-        margin-bottom: 15px;
-    }
-    footer {
-        padding: 15px 5px;
-        font-size: 0.75rem;
-    }
+    header { height: 60vh; }
+    header h1 { font-size: 2.5rem; }
+    header h2 { font-size: 1.1rem; }
+    header .contato-topo { bottom: 10px; font-size: 0.75rem; padding: 8px 15px; }
+    nav { padding: 8px 0; }
+    nav a { margin: 0 6px; font-size: 0.8rem; white-space: normal; }
+    h2 { font-size: 2rem; margin-bottom: 20px; }
+    section { padding: 30px 10px; min-height: 35vh; }
+    .galeria-full-page { gap: 10px; padding: 30px 5px; } /* --- Ajuste de padding --- */
+    .galeria-full-page a { height: 180px; }
+    .gallery-preview-section { min-height: 40vh; }
+    .gallery-preview-link img { height: 200px; }
+    .preview-overlay { font-size: 1.2rem; }
+    .back-link { font-size: 0.85rem; margin-bottom: 15px; }
+    footer { padding: 15px 5px; font-size: 0.75rem; }
 }
 
 /* Telas Extra Pequenas (até 375px) */
 @media (max-width: 375px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    header h2 {
-        font-size: 1rem;
-    }
-    nav a {
-        font-size: 0.75rem;
-        margin: 0 4px;
-    }
-    h2 {
-        font-size: 1.6rem;
-    }
-    .galeria a, .galeria-full-page a {
-        height: 160px;
-    }
-    .preview-overlay {
-        font-size: 1rem;
-    }
+    header h1 { font-size: 2rem; }
+    header h2 { font-size: 1rem; }
+    nav a { font-size: 0.75rem; margin: 0 4px; }
+    h2 { font-size: 1.6rem; }
+    .galeria-full-page a { height: 160px; }
+    .preview-overlay { font-size: 1rem; }
 }

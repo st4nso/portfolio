@@ -234,7 +234,7 @@ h2 {
 
 .back-link a:hover {
     color: red;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .galeria-full-page {

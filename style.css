@@ -39,7 +39,7 @@ nav a {
 /* Header (Cabeçalho principal) */
 header {
     height: 100vh;
-    background: url('impressoes 8.JPG') center/cover no-repeat;
+    background: url('impressoes 8.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,11 +133,11 @@ h2 {
 }
 
 /* Imagens de fundo para cada seção da página inicial (index.html) */
-#lain-series-home { background-image: url('lain_series/lain1.JPG'); }
-#palato-home { background-image: url('palato/palato0.JPG'); }
+#lain-series-home { background-image: url('lain_series/lain4.jpg'); }
+#palato-home { background-image: url('palato/palato14.jpg'); }
 #night-life-home { background-image: url('night1.JPG'); }
-#cianotype-home { background-image: url('cianotipia/cianotipia0.JPG'); }
-#visual-expressions-home { background-image: url('ve1.JPG'); }
+#cianotype-home { background-image: url('cianotipia/cianotipia0.jpg'); }
+#visual-expressions-home { background-image: url('ve1.jpg'); }
 
 .gallery-preview-link {
     display: inline-block;

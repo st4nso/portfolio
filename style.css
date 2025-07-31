@@ -242,41 +242,75 @@ h2 {
 }
 
 .galeria-full-page {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+  
+.galeria-full-page {
+    display: flex; /* Define o container como um flexbox */
+    overflow-x: scroll; /* Habilita a rolagem horizontal */
+    overflow-y: hidden; /* Esconde a rolagem vertical */
+    white-space: nowrap; /* Impede que os itens quebrem a linha */
     padding: 0 20px;
-    max-width: 1200px;
+    gap: 15px; /* Espaço entre as imagens */
+    max-width: 100%;
     margin: 0 auto 80px auto;
+    
+    /* Melhora a experiência de rolagem em dispositivos touch */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    
+    /* Opcional: Estilo da barra de rolagem (WebKit - Chrome/Safari) */
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: red black; /* Cor da barra e do "track" para Firefox */
+}
+
+/* Oculta a barra de rolagem para navegadores WebKit */
+.galeria-full-page::-webkit-scrollbar {
+    display: none;
+}
+
+.galeria-full-page {
+    display: flex; /* Define o container como um flexbox */
+    overflow-x: scroll; /* Habilita a rolagem horizontal */
+    overflow-y: hidden; /* Esconde a rolagem vertical */
+    white-space: nowrap; /* Impede que os itens quebrem a linha */
+    padding: 0 20px;
+    gap: 15px; /* Espaço entre as imagens */
+    max-width: 100%;
+    margin: 0 auto 80px auto;
+    
+    /* Melhora a experiência de rolagem em dispositivos touch */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    
+    /* Opcional: Estilo da barra de rolagem (WebKit - Chrome/Safari) */
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: red black; /* Cor da barra e do "track" para Firefox */
+}
+
+/* Oculta a barra de rolagem para navegadores WebKit */
+.galeria-full-page::-webkit-scrollbar {
+    display: none;
 }
 
 .galeria-full-page a {
-    display: flex; /* Transforma o link em um flex container */
-    justify-content: center;
-    align-items: center;
-    /* REMOVIDO: background-color: #1a1a1a; */
-    /* REMOVIDO: border: 1px solid #333; */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Mantém a sombra para um leve destaque */
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    padding: 0px; /* Reduz padding para que o fundo desapareça, e a imagem encoste nas bordas do container */
-    height: 250px; /* Altura fixa para o container da imagem completa */
+    flex: 0 0 auto; /* Permite que os itens não encolham e não cresçam, mantendo o tamanho original */
+    display: inline-block; /* Garante que os links se comportem como blocos em linha */
+    position: relative;
+    height: 350px; /* Altura fixa para as imagens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
 }
 
 .galeria-full-page a:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
 
 .galeria-full-page img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain; /* Garante que a imagem caiba sem corte */
+    height: 100%; /* A imagem preenche a altura do seu contêiner */
+    width: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar */
     display: block;
-    border: none;
-    box-shadow: none;
 }
 
 /* Rodapé */

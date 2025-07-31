@@ -39,7 +39,7 @@ nav a {
 /* Header (Cabeçalho principal) */
 header {
     height: 100vh;
-    background: url('impressoes 8.jpg') center/cover no-repeat;
+    background: url('impressoes/impressoes 8.JPG') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,11 +133,25 @@ h2 {
 }
 
 /* Imagens de fundo para cada seção da página inicial (index.html) */
-#lain-series-home { background-image: url('lain_series/lain4.jpg'); }
-#palato-home { background-image: url('palato/palato14.jpg'); }
-#night-life-home { background-image: url('night1.JPG'); }
-#cianotype-home { background-image: url('cianotipia/cianotipia0.jpg'); }
-#visual-expressions-home { background-image: url('ve1.jpg'); }
+#lain-series-home {
+    background-image: url('lain_series/lain3.jpg');
+}
+
+#palato-home {
+    background-image: url('palato/palato0.jpg');
+}
+
+#night-life-home {
+    background-image: url('night_life/night26.JPG');
+}
+
+#cianotype-home {
+    background-image: url('cianotipia/cianotipia3.jpg');
+}
+
+#visual-expressions-home {
+    background-image: url('ve1.JPG');
+}
 
 .gallery-preview-link {
     display: inline-block;
@@ -221,6 +235,9 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
+    /* Adicionado fundo branco para as miniaturas ficarem visíveis */
+    background-color: #fff;
+    padding: 5px;
 }
 
 .galeria-full-page a:hover {
@@ -231,6 +248,7 @@ h2 {
 .galeria-full-page img {
     height: 100%;
     width: auto;
+    /* Alterado para preencher o fundo branco e não ter bordas pretas */
     object-fit: cover;
     display: block;
     border: none;
@@ -279,56 +297,152 @@ footer a {
 
 /* Telas até 1024px */
 @media (max-width: 1024px) {
-    header h1 { font-size: 6rem; }
-    header h2 { font-size: 2.5rem; }
-    h2 { font-size: 3.8rem; }
-    .galeria-full-page a { height: 250px; }
-    .gallery-preview-section { min-height: 60vh; }
-    .gallery-preview-link img { height: 350px; }
-    .preview-overlay { font-size: 2rem; }
+    header h1 {
+        font-size: 6rem;
+    }
+    header h2 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 3.8rem;
+    }
+    .galeria-full-page a {
+        height: 250px;
+    }
+    .gallery-preview-section {
+        min-height: 60vh;
+    }
+    .gallery-preview-link img {
+        height: 350px;
+    }
+    .preview-overlay {
+        font-size: 2rem;
+    }
 }
 
 /* Telas até 768px */
 @media (max-width: 768px) {
-    header { height: 70vh; }
-    header h1 { font-size: 4rem; padding: 0 10px; }
-    header h2 { font-size: 1.8rem; }
-    header .contato-topo { bottom: 20px; font-size: 0.9rem; padding: 10px 20px; }
-    nav { padding: 10px 0; }
-    nav a { margin: 0 10px; font-size: 0.9rem; }
-    h2 { font-size: 2.8rem; margin-bottom: 30px; }
-    .galeria-full-page { padding: 0 10px; gap: 10px; }
-    .galeria-full-page a { height: 200px; }
-    .gallery-preview-section { min-height: 50vh; }
-    .gallery-preview-link img { height: 250px; }
-    .preview-overlay { font-size: 1.6rem; }
-    .back-link { font-size: 1rem; margin-bottom: 20px; }
+    header {
+        height: 70vh;
+    }
+    header h1 {
+        font-size: 4rem;
+        padding: 0 10px;
+    }
+    header h2 {
+        font-size: 1.8rem;
+    }
+    header .contato-topo {
+        bottom: 20px;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    nav {
+        padding: 10px 0;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    h2 {
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+    }
+    .galeria-full-page {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    .galeria-full-page a {
+        height: 200px;
+    }
+    .gallery-preview-section {
+        min-height: 50vh;
+    }
+    .gallery-preview-link img {
+        height: 250px;
+    }
+    .preview-overlay {
+        font-size: 1.6rem;
+    }
+    .back-link {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
 }
 
 /* Telas até 480px */
 @media (max-width: 480px) {
-    header { height: 60vh; }
-    header h1 { font-size: 2.5rem; }
-    header h2 { font-size: 1.1rem; }
-    header .contato-topo { bottom: 10px; font-size: 0.75rem; padding: 8px 15px; }
-    nav { padding: 8px 0; }
-    nav a { margin: 0 6px; font-size: 0.8rem; white-space: normal; }
-    h2 { font-size: 2rem; margin-bottom: 20px; }
-    .galeria-full-page { gap: 10px; padding: 0 5px; }
-    .galeria-full-page a { height: 180px; }
-    .gallery-preview-section { min-height: 40vh; }
-    .gallery-preview-link img { height: 200px; }
-    .preview-overlay { font-size: 1.2rem; }
-    .back-link { font-size: 0.85rem; margin-bottom: 15px; }
-    footer { padding: 15px 5px; font-size: 0.75rem; }
+    header {
+        height: 60vh;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header h2 {
+        font-size: 1.1rem;
+    }
+    header .contato-topo {
+        bottom: 10px;
+        font-size: 0.75rem;
+        padding: 8px 15px;
+    }
+    nav {
+        padding: 8px 0;
+    }
+    nav a {
+        margin: 0 6px;
+        font-size: 0.8rem;
+        white-space: normal;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .galeria-full-page {
+        gap: 10px;
+        padding: 0 5px;
+    }
+    .galeria-full-page a {
+        height: 180px;
+    }
+    .gallery-preview-section {
+        min-height: 40vh;
+    }
+    .gallery-preview-link img {
+        height: 200px;
+    }
+    .preview-overlay {
+        font-size: 1.2rem;
+    }
+    .back-link {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    footer {
+        padding: 15px 5px;
+        font-size: 0.75rem;
+    }
 }
 
 /* Telas Extra Pequenas (até 375px) */
 @media (max-width: 375px) {
-    header h1 { font-size: 2rem; }
-    header h2 { font-size: 1rem; }
-    nav a { font-size: 0.75rem; margin: 0 4px; }
-    h2 { font-size: 1.6rem; }
-    .galeria-full-page a { height: 160px; }
-    .preview-overlay { font-size: 1rem; }
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    nav a {
+        font-size: 0.75rem;
+        margin: 0 4px;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .galeria-full-page a {
+        height: 160px;
+    }
+    .preview-overlay {
+        font-size: 1rem;
+    }
 }

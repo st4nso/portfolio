@@ -87,25 +87,26 @@ header .contato-topo a:hover {
     color: red;
 }
 
-/* Seções */
-section {
+/* --- ESTILOS PARA AS SEÇÕES DA PÁGINA INICIAL --- */
+.gallery-preview-section {
     padding: 80px 20px;
-    background-color: #0d0d0d;
+    background-color: transparent;
     border-bottom: 1px solid #222;
+    text-align: center;
+    min-height: 70vh;
     position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-section::before {
+/* Overlay para todas as seções */
+.gallery-preview-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -116,13 +117,9 @@ section::before {
     z-index: 1;
 }
 
-section > * {
+.gallery-preview-section > * {
     position: relative;
     z-index: 2;
-}
-
-section:last-of-type {
-    border-bottom: none;
 }
 
 h2 {
@@ -136,34 +133,11 @@ h2 {
 }
 
 /* Imagens de fundo para cada seção da página inicial (index.html) */
-#lain-series-home {
-    background-image: url('lain_series/lain1.JPG');
-}
-
-#palato-home {
-    background-image: url('palato/palato0.JPG');
-}
-
-#night-life-home {
-    background-image: url('night1.JPG');
-}
-
-#cianotype-home {
-    background-image: url('cianotipia/cianotipia0.JPG');
-}
-
-#visual-expressions-home {
-    background-image: url('ve1.JPG');
-}
-
-/* --- ESTILOS PARA AS PRÉ-VISUALIZAÇÕES NA PÁGINA INICIAL --- */
-.gallery-preview-section {
-    padding: 80px 20px;
-    background-color: transparent;
-    border-bottom: 1px solid #222;
-    text-align: center;
-    min-height: 70vh;
-}
+#lain-series-home { background-image: url('lain_series/lain1.JPG'); }
+#palato-home { background-image: url('palato/palato0.JPG'); }
+#night-life-home { background-image: url('night1.JPG'); }
+#cianotype-home { background-image: url('cianotipia/cianotipia0.JPG'); }
+#visual-expressions-home { background-image: url('ve1.JPG'); }
 
 .gallery-preview-link {
     display: inline-block;
@@ -213,21 +187,12 @@ h2 {
     opacity: 1;
 }
 
-/* --- ESTILOS PARA AS PÁGINAS DE GALERIA COMPLETAS (com rolagem horizontal) --- */
-.back-link {
-    margin-top: -30px;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-}
-
-.back-link a {
-    color: #007bff;
-    font-weight: bold;
-}
-
-.back-link a:hover {
-    color: red;
-    text-decoration: underline;
+/* --- ESTILOS PARA AS PÁGINAS DE GALERIA COMPLETAS --- */
+/* Esta é a nova classe para o fundo branco */
+.galeria-container {
+    background-color: #fff;
+    padding: 40px 0;
+    margin: 0;
 }
 
 .galeria-full-page {
@@ -235,18 +200,17 @@ h2 {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    padding: 30px 20px; /* --- ALTERAÇÃO: Adicionado padding superior para espaço abaixo do título --- */
+    padding: 0 20px;
     gap: 15px;
     max-width: 100%;
-    margin: 0 auto 80px auto;
+    margin: 0 auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    /* --- ALTERAÇÃO: Removida a cor da scrollbar --- */
-    scrollbar-width: thin; /* Mantém para Firefox, mas sem cor definida */
+    scrollbar-width: none;
 }
 
 .galeria-full-page::-webkit-scrollbar {
-    display: none; /* --- ALTERAÇÃO: Oculta a scrollbar para navegadores WebKit (Chrome, Safari) --- */
+    display: none;
 }
 
 .galeria-full-page a {
@@ -257,9 +221,6 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    background-color: #fff; /* --- ALTERAÇÃO: Fundo branco para as miniaturas --- */
-    padding: 5px; /* --- Opcional: Adiciona um pequeno padding dentro do fundo branco --- */
-    box-sizing: border-box; /* --- Garante que o padding não aumente o tamanho do elemento --- */
 }
 
 .galeria-full-page a:hover {
@@ -270,10 +231,28 @@ h2 {
 .galeria-full-page img {
     height: 100%;
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     border: none;
     box-shadow: none;
+}
+
+.back-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.back-link a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    color: red;
+    text-decoration: underline;
 }
 
 /* Rodapé */
@@ -303,7 +282,6 @@ footer a {
     header h1 { font-size: 6rem; }
     header h2 { font-size: 2.5rem; }
     h2 { font-size: 3.8rem; }
-    section { min-height: 50vh; }
     .galeria-full-page a { height: 250px; }
     .gallery-preview-section { min-height: 60vh; }
     .gallery-preview-link img { height: 350px; }
@@ -319,13 +297,12 @@ footer a {
     nav { padding: 10px 0; }
     nav a { margin: 0 10px; font-size: 0.9rem; }
     h2 { font-size: 2.8rem; margin-bottom: 30px; }
-    section { padding: 50px 15px; min-height: 40vh; }
-    .galeria-full-page { padding: 30px 10px; gap: 10px; } /* --- Ajuste de padding --- */
+    .galeria-full-page { padding: 0 10px; gap: 10px; }
     .galeria-full-page a { height: 200px; }
     .gallery-preview-section { min-height: 50vh; }
     .gallery-preview-link img { height: 250px; }
     .preview-overlay { font-size: 1.6rem; }
-    .back-link { font-size: 1rem; margin-bottom: 30px; }
+    .back-link { font-size: 1rem; margin-bottom: 20px; }
 }
 
 /* Telas até 480px */
@@ -337,8 +314,7 @@ footer a {
     nav { padding: 8px 0; }
     nav a { margin: 0 6px; font-size: 0.8rem; white-space: normal; }
     h2 { font-size: 2rem; margin-bottom: 20px; }
-    section { padding: 30px 10px; min-height: 35vh; }
-    .galeria-full-page { gap: 10px; padding: 30px 5px; } /* --- Ajuste de padding --- */
+    .galeria-full-page { gap: 10px; padding: 0 5px; }
     .galeria-full-page a { height: 180px; }
     .gallery-preview-section { min-height: 40vh; }
     .gallery-preview-link img { height: 200px; }

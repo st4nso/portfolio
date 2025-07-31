@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Photography Portfolio- Lucas Stanso</title>
+<style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+  </style>
+<style>
+/* Centralizar todos os títulos */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Galeria responsiva */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 0 10px;
+}
+
+/* Lightbox setas visíveis */
+.lb-prev, .lb-next {
+  visibility: visible !important;
+}
+
+/* Capas com clique e setas funcionais */
+.section-cover {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-cover img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.section-cover img:hover {
+  transform: scale(1.03);
+}
+</style></head>
+<body>
+<h1 id="titulo">Lucas Stanso</h1>
+<section id="lain-gika">
+<h2>Lain-Gika</h2>
+<div class="section-cover"><a data-lightbox="galeria" href="lain_series/lain1.jpg"><img src="lain_series/lain1.jpg"/></a></div><div class="galeria">
+<a data-lightbox="galeria" href="lain_series/lain1.jpg"><img src="lain_series/lain1.jpg"/></a>
+<a data-lightbox="galeria" href="lain_series/lain2.jpg"><img src="lain_series/lain2.jpg"/></a>
+</div>
+</section>
+</body>
+</html>

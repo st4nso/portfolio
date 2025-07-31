@@ -1,35 +1,47 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Lain Series</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-    }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
-      padding: 20px;
-    }
-    .galeria img {
-      width: 100%;
-      height: auto;
-    }
-    a {
-      text-decoration: none;
-      color: red;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lain Series - Lucas Stanso</title>
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
-  <h1>Lain Series</h1>
-  <p><a href="index.html">← Voltar ao início</a></p>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="palato.html">Palato</a>
+        <a href="night-life.html">Night Life</a>
+        <a href="cianotype.html">Cianotype</a>
+        <a href="visual-expressions.html">Visual Expressions</a>
+    </nav>
+
+    <section id="lain-content">
+        <h2>Lain Series</h2>
+        <p class="back-link"><a href="index.html#lain-series">← Voltar para a seção Lain Series no Início</a></p>
+
+        <div class="galeria-full-page">
+            <a href="lain_series/lain1.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 1"><img src="lain_series/lain1.jpg" alt="Lain Series Imagem 1"></a>
+            <a href="lain_series/lain2.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 2"><img src="lain_series/lain2.jpg" alt="Lain Series Imagem 2"></a>
+            <a href="lain_series/lain3.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 3"><img src="lain_series/lain3.jpg" alt="Lain Series Imagem 3"></a>
+            <a href="lain_series/lain4.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 4"><img src="lain_series/lain4.jpg" alt="Lain Series Imagem 4"></a>
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Lucas Stanso. Todos os direitos reservados.</p>
+        <p>Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a> • WhatsApp: <a href="https://wa.me/5513996827109" target="_blank">+55 13 99682-7109</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        })
+    </script>
+</body>
+</html>
 
   <div class="galeria">
     <a href="lain_series/lain1.jpg" data-lightbox="lain" data-title="Lain 1"><img src="lain_series/lain1.jpg" alt="Lain 1"></a>

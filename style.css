@@ -39,7 +39,7 @@ nav a {
 /* Header (Cabeçalho principal) */
 header {
     height: 100vh;
-    background: url('impressoes 8.jpg') center/cover no-repeat;
+    background: url('impressoes 8.JPG') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,23 +142,23 @@ h2 {
 
 /* Imagens de fundo para cada seção da página inicial (index.html) */
 #lain-series-home {
-    background-image: url('lain_series/lain1.jpg'); /* Altere 'caminho/para/lain_capa.jpg' pela imagem que quiser */
+    background-image: url('lain_series/lain1.JPG');
 }
 
 #palato-home {
-    background-image: url('palato/palato0.jpg'); /* Altere 'caminho/para/palato_capa.jpg' */
+    background-image: url('palato/palato0.JPG');
 }
 
 #night-life-home {
-    background-image: url('night1.JPG'); /* Altere 'caminho/para/night_capa.jpg' */
+    background-image: url('night1.JPG');
 }
 
 #cianotype-home {
-    background-image: url('cianotipia/cianotipia0.jpg'); /* Altere 'caminho/para/cianotype_capa.jpg' */
+    background-image: url('cianotipia/cianotipia0.JPG');
 }
 
 #visual-expressions-home {
-    background-image: url('ve1.jpg'); /* Altere 'caminho/para/visual_expressions_capa.jpg' */
+    background-image: url('ve1.JPG');
 }
 
 
@@ -169,10 +169,6 @@ h2 {
     border-bottom: 1px solid #222;
     text-align: center;
     min-height: 70vh; /* Aumenta a altura mínima para destacar o fundo */
-}
-
-.gallery-preview-section h2 {
-    margin-bottom: 40px;
 }
 
 .gallery-preview-link {
@@ -223,7 +219,7 @@ h2 {
     opacity: 1;
 }
 
-/* --- Estilos para as Páginas de Galeria Completas (ex: lain.html, palato.html) --- */
+/* --- Estilos para as Páginas de Galeria Completas com rolagem horizontal (ex: lain.html, palato.html) --- */
 
 .back-link {
     margin-top: -30px;
@@ -242,60 +238,29 @@ h2 {
 }
 
 .galeria-full-page {
-  
-.galeria-full-page {
-    display: flex; /* Define o container como um flexbox */
-    overflow-x: scroll; /* Habilita a rolagem horizontal */
-    overflow-y: hidden; /* Esconde a rolagem vertical */
-    white-space: nowrap; /* Impede que os itens quebrem a linha */
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
     padding: 0 20px;
-    gap: 15px; /* Espaço entre as imagens */
+    gap: 15px;
     max-width: 100%;
     margin: 0 auto 80px auto;
-    
-    /* Melhora a experiência de rolagem em dispositivos touch */
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    
-    /* Opcional: Estilo da barra de rolagem (WebKit - Chrome/Safari) */
-    scrollbar-width: thin; /* Para Firefox */
-    scrollbar-color: red black; /* Cor da barra e do "track" para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: red black;
 }
 
-/* Oculta a barra de rolagem para navegadores WebKit */
-.galeria-full-page::-webkit-scrollbar {
-    display: none;
-}
-
-.galeria-full-page {
-    display: flex; /* Define o container como um flexbox */
-    overflow-x: scroll; /* Habilita a rolagem horizontal */
-    overflow-y: hidden; /* Esconde a rolagem vertical */
-    white-space: nowrap; /* Impede que os itens quebrem a linha */
-    padding: 0 20px;
-    gap: 15px; /* Espaço entre as imagens */
-    max-width: 100%;
-    margin: 0 auto 80px auto;
-    
-    /* Melhora a experiência de rolagem em dispositivos touch */
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    
-    /* Opcional: Estilo da barra de rolagem (WebKit - Chrome/Safari) */
-    scrollbar-width: thin; /* Para Firefox */
-    scrollbar-color: red black; /* Cor da barra e do "track" para Firefox */
-}
-
-/* Oculta a barra de rolagem para navegadores WebKit */
 .galeria-full-page::-webkit-scrollbar {
     display: none;
 }
 
 .galeria-full-page a {
-    flex: 0 0 auto; /* Permite que os itens não encolham e não cresçam, mantendo o tamanho original */
-    display: inline-block; /* Garante que os links se comportem como blocos em linha */
+    flex: 0 0 auto;
+    display: inline-block;
     position: relative;
-    height: 350px; /* Altura fixa para as imagens */
+    height: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
@@ -307,10 +272,12 @@ h2 {
 }
 
 .galeria-full-page img {
-    height: 100%; /* A imagem preenche a altura do seu contêiner */
-    width: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar */
+    height: 100%;
+    width: auto;
+    object-fit: contain;
     display: block;
+    border: none;
+    box-shadow: none;
 }
 
 /* Rodapé */
@@ -350,14 +317,14 @@ footer a {
         min-height: 50vh; /* Altura mínima ajustada */
     }
     .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas um pouco menores */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
     }
     .galeria a {
         height: 200px; /* Altura ajustada */
     }
     .galeria-full-page a {
-        height: 200px;
+        height: 250px;
     }
     .gallery-preview-section {
         min-height: 60vh; /* Ajuste para a prévia da galeria */
@@ -412,13 +379,11 @@ footer a {
         padding: 0px; /* Removido padding */
     }
     .galeria-full-page {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
         padding: 0 10px;
+        gap: 10px;
     }
     .galeria-full-page a {
-        height: 150px;
-        padding: 0px; /* Removido padding */
+        height: 200px;
     }
     .gallery-preview-section {
         min-height: 50vh; /* Ajuste para a prévia da galeria */
@@ -468,7 +433,6 @@ footer a {
         min-height: 35vh;
     }
     .galeria, .galeria-full-page {
-        grid-template-columns: 1fr;
         gap: 10px;
         padding: 0 5px;
     }

@@ -1,69 +1,233 @@
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Photography Portfolio- Lucas Stanso</title>
 <style>
-    body {
-      background-color: black;
-      color: white;
+
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Portfolio- Lucas Stanso</title>
+  <style>
+      nav {
+    text-align: center;
+    margin: 30px 0;
+    font-family: "Calisto MT", serif;
+    font-size: 16px;
+  }
+
+  nav a {
+    margin: 0 15px;
+    color: gray;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  nav a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+    body 
+
+{
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-color: #000;
+      color: black;
+    }
+    header {
+      height: 100vh;
+      background: url('impressoes 8.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    header h1 {
+      font-size: 150px;
+      text-transform: uppercase;
+      background: transparent;
+      padding: 30px;
+    }
+    header .contato-topo {
+      position: absolute;
+      bottom: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+    nav {
+      background: #111;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    h2 {
+      color: #ccc;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
     }
     .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      padding: 0 20px;
+    }
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border: 0px solid #ccc;
+    }
+    .duas-colunas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    footer {
+      background: #111;
+      color: #777;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
-<style>
-/* Centralizar todos os títulos */
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
 
-/* Galeria responsiva */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
-  padding: 0 10px;
-}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-/* Lightbox setas visíveis */
-.lb-prev, .lb-next {
-  visibility: visible !important;
-}
-
-/* Capas com clique e setas funcionais */
-.section-cover {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-cover img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
-.section-cover img:hover {
-  transform: scale(1.03);
-}
-</style></head>
+</head>
 <body>
-<h1 id="titulo">Lucas Stanso</h1>
-<section id="lain-gika">
+  <nav>
+  <a href="#lain-gika">Lain - Gika</a>
+  <a href="#Palato">Palato</a>
+  <a href="#Night Life">Night Life</a>
+  <a href="#Cianotype">Cianotype</a>
+  <a href="#Visual-expressions">Visual Expressions</a>
+</nav>
+
+  <header id="intro">
+    <h1 style="font-family: 'Times New Roman', serif; color: red;">Lucas Stanso</h1>
+<h2 style="font-family: 'Calisto MT', serif; color: red;">Photography Portfolio</h2>
+    <div class="contato-topo">
+      Instagram: @_stanso • WhatsApp: +55 13 99682-7109
+    </div>
+  </header>
+
+  <section id="lain-gika">
 <h2>Lain-Gika</h2>
-<div class="section-cover"><a data-lightbox="galeria" href="lain_series/lain1.jpg"><img src="lain_series/lain1.jpg"/></a></div><div class="galeria">
-<a data-lightbox="galeria" href="lain_series/lain1.jpg"><img src="lain_series/lain1.jpg"/></a>
-<a data-lightbox="galeria" href="lain_series/lain2.jpg"><img src="lain_series/lain2.jpg"/></a>
-</div>
+     
+  <!-- Capa clicável -->
+  <div style="text-align: center;">
+    <a href="lain_series/lain1.jpg" data-lightbox="lain-gika" data-title="Lain - Gika">
+      <img src="lain_series/lain1.jpg" alt="Capa Lain-Gika" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+    </a>
+  </div>
+
+  <!-- Galeria escondida -->
+  <div style="display: none;">
+    <a href="lain_series/lain1.jpg" data-lightbox="lain_series/lain1.jpg"></a>
+    <a href="lain_series/lain2.jpg" data-lightbox="lain_series/lain2.jpg"></a>
+    <a href="lain_series/lain3.jpg" data-lightbox="lain_series/lain3.jpg"></a>
+    <a href="lain_series/lain4.jpg" data-lightbox="lain_series/lain4.jpg"></a>
+    <a href="lain_series/lain5.jpg" data-lightbox="lain_series/lain5.jpg"></a>
+    <a href="lain_series/lain6.jpg" data-lightbox="lain_series/lain6.jpg"></a>
+  </div>
 </section>
-</body>
-</html>
+
+  
+  <section id="Palato">
+  <h2>Palato</h2>
+  <div class="galeria">
+ <a href="palato/palato0.jpg" data-lightbox="galeria"><img src="palato/palato0.jpg" alt="palato0.jpg"></a>
+ <a href="palato/palato1.jpg" data-lightbox="galeria"><img src="palato/palato1.jpg" alt="palato1.jpg""></a>
+ <a href="palato/palato2.jpg" data-lightbox="galeria"><img src="palato/palato2.jpg" alt="palato2.jpg""></a>
+ <a href="palato/palato3.jpg" data-lightbox="galeria"><img src="palato/palato3.jpg" alt="palato3.jpg""></a>
+ <a href="palato/palato8.jpg" data-lightbox="galeria"><img src="palato/palato8.jpg" alt="palato8.jpg""></a>
+ <a href="palato/palato9.jpg" data-lightbox="galeria"><img src="palato/palato9.jpg" alt="palato9.jpg""></a>    
+ <a href="palato/palato10.jpg" data-lightbox="galeria"><img src="palato/palato10.jpg" alt="palato10.jpg""></a>
+<a href="palato/palato5.jpg" data-lightbox="galeria"><img src="palato/palato5.jpg" alt="palato5.jpg""></a>
+<a href="palato/palato6.jpg" data-lightbox="galeria"><img src="palato/palato6.jpg" alt="palato6.jpg""></a>
+<a href="palato/palato7.jpg" data-lightbox="galeria"><img src="palato/palato7.jpg" alt="palato7.jpg""></a>
+<a href="palato/palato11.jpg" data-lightbox="galeria"><img src="palato/palato11.jpg" alt="palato11.jpg""></a>
+<a href="palato/palato12.jpg" data-lightbox="galeria"><img src="palato/palato12.jpg" alt="palato12.jpg""></a>
+<a href="palato/palato13.jpg" data-lightbox="galeria"><img src="palato/palato13.jpg" alt="palato13.jpg""></a>
+  </div>
+</section>
+
+
+<section id="Night Life">
+  <h2>Night Life</h2>
+  <div class="galeria">
+    <a href="night1.JPG" data-lightbox="galeria"><img src="night1.JPG" alt="night1.JPG"></a>
+    <a href="night2.JPG" data-lightbox="galeria"><img src="night2.JPG" alt="night2.JPG"></a>
+    <a href="night6.JPG" data-lightbox="galeria"><img src="night6.JPG" alt="night6.JPG"></a>
+    <a href="night4.JPG" data-lightbox="galeria"><img src="night4.JPG" alt="night4.JPG"></a>
+    <a href="night5.JPG" data-lightbox="galeria"><img src="night5.JPG" alt="night5.JPG"></a>
+    <a href="night3.JPG" data-lightbox="galeria"><img src="night3.JPG" alt="night3.JPG"></a>
+    <a href="night7.JPG" data-lightbox="galeria"><img src="night7.JPG" alt="night7.JPG"></a>
+    <a href="night8.JPG" data-lightbox="galeria"><img src="night8.JPG" alt="night8.JPG"></a>
+    <a href="night9.JPG" data-lightbox="galeria"><img src="night9.JPG" alt="night9.JPG"></a>
+    <a href="night10.JPG" data-lightbox="galeria"><img src="night10.JPG" alt="night10.JPG"></a>
+    <a href="night11.JPG" data-lightbox="galeria"><img src="night11.JPG" alt="night11.JPG"></a>
+    <a href="night12.JPG" data-lightbox="galeria"><img src="night12.JPG" alt="night12.JPG"></a>
+    <a href="night13.JPG" data-lightbox="galeria"><img src="night13.JPG" alt="night13.JPG"></a>
+    <a href="night14.JPG" data-lightbox="galeria"><img src="night14.JPG" alt="night14.JPG"></a>
+    <a href="night15.JPG" data-lightbox="galeria"><img src="night15.JPG" alt="night15.JPG"></a>
+    <a href="night16.JPG" data-lightbox="galeria"><img src="night16.JPG" alt="night16.JPG"></a>
+    <a href="night17.JPG" data-lightbox="galeria"><img src="night17.JPG" alt="night17.JPG"></a>
+    <a href="night18.JPG" data-lightbox="galeria"><img src="night18.JPG" alt="night18.JPG"></a>
+    <a href="night19.JPG" data-lightbox="galeria"><img src="night19.JPG" alt="night19.JPG"></a>
+    <a href="night20.JPG" data-lightbox="galeria"><img src="night20.JPG" alt="night20.JPG"></a>
+    <a href="night21.JPG" data-lightbox="galeria"><img src="night21.JPG" alt="night21.JPG"></a>
+    <a href="night22.JPG" data-lightbox="galeria"><img src="night22.JPG" alt="night22.JPG"></a>
+    <a href="night23.JPG" data-lightbox="galeria"><img src="night23.JPG" alt="night23.JPG"></a>
+    <a href="night24.JPG" data-lightbox="galeria"><img src="night24.JPG" alt="night24.JPG"></a>
+    <a href="night25.JPG" data-lightbox="galeria"><img src="night25.JPG" alt="night25.JPG"></a>
+    
+  </div>
+</section>
+
+<section id="Cianotype">
+  <h2>Cianotype</h2>
+  <div class="galeria">
+     <a href="cianotipia/cianotipia0.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia0.jpg" alt="cianotipia0"></a>
+     <a href="cianotipia/cianotipia1.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia1.jpg" alt="cianotipia1"></a>
+     <a href="cianotipia/cianotipia2.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia2.jpg" alt="cianotipia2"></a>
+     <a href="cianotipia/cianotipia3.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia3.jpg" alt="cianotipia3"></a>
+     <a href="cianotipia/cianotipia4.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia4.jpg" alt="cianotipia4"></a>
+     <a href="cianotipia/cianotipia5.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia5.jpg" alt="cianotipia5"></a>
+     <a href="cianotipia/cianotipia6.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia6.jpg" alt="cianotipia6"></a>
+     <a href="cianotipia/cianotipia7.jpg" data-lightbox="galeria"><img src="cianotipia/cianotipia7.jpg" alt="cianotipia7"></a>
+    
+  </div>
+</section>
+
+<section id="Visual-expressions">
+  <h2>Visual Expressions</h2>
+  <div class="galeria">
+    <a href="ve1.jpg" data-lightbox="galeria"><img src="ve1.jpg" alt="Visual Expression 1"></a>
+    <a href="ve2.jpg" data-lightbox="galeria"><img src="ve2.jpg" alt="Visual Expression 2"></a>
+  </div>
+</section>
+  <footer>
+    © 2025 Lucas Stanso. Todos os direitos reservados. <br>
+    Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a> • WhatsApp: <a href="https://wa.me/5513996827109" target="_blank">+55 13 99682-7109</a>

@@ -1,0 +1,268 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #ccc; /* Cor de texto padrão visível no fundo escuro */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+a {
+    color: #ccc; /* Cor padrão dos links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: red; /* Cor de destaque para links no hover */
+}
+
+/* Navegação */
+nav {
+    background: #111;
+    text-align: center;
+    padding: 15px 0; /* Espaçamento superior e inferior para a navegação */
+    position: sticky; /* Fixa a navegação no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que a navegação fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para destacar a barra de navegação */
+}
+
+nav a {
+    margin: 0 18px; /* Espaçamento entre os itens da navegação */
+    font-weight: bold;
+    font-size: 1.05rem; /* Levemente maior */
+}
+
+/* Header (Cabeçalho principal) */
+header {
+    height: 100vh;
+    background: url('impressoes 8.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    /* Adiciona um overlay escuro para a imagem de fundo, melhorando a legibilidade do texto */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 8rem; /* Tamanho do nome */
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 20px; /* Adiciona padding horizontal */
+    color: red; /* Cor do nome */
+    margin-bottom: 10px; /* Espaçamento entre o nome e o subtítulo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o texto do nome */
+}
+
+header h2 {
+    font-size: 3rem; /* Tamanho do subtítulo */
+    color: red; /* Cor do subtítulo */
+    margin-top: 0; /* Remove margem superior padrão */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para o texto do subtítulo */
+}
+
+header .contato-topo {
+    position: absolute;
+    bottom: 25px; /* Ajusta a posição vertical */
+    background: rgba(0, 0, 0, 0.75); /* Fundo mais escuro */
+    padding: 12px 25px; /* Mais padding */
+    border: 1px solid #444; /* Borda mais discreta */
+    font-size: 0.95rem; /* Levemente maior */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header .contato-topo a {
+    color: #fff; /* Links brancos no contato topo */
+    font-weight: normal;
+}
+
+header .contato-topo a:hover {
+    color: red; /* Destaque em vermelho no hover */
+}
+
+/* Seções */
+section {
+    padding: 80px 20px; /* Mais padding para separar as seções */
+    background-color: #0d0d0d; /* Fundo ligeiramente diferente para as seções */
+    border-bottom: 1px solid #222; /* Linha divisória sutil entre seções */
+}
+
+section:last-of-type {
+    border-bottom: none; /* Remove a borda da última seção */
+}
+
+h2 {
+    color: #e0e0e0; /* Cor dos títulos das seções */
+    font-size: 4.5rem; /* Tamanho ajustado para títulos de seção */
+    margin-bottom: 50px; /* Mais espaço abaixo do título */
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase; /* Deixa os títulos em maiúsculas */
+}
+
+/* Galeria de Imagens */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas flexíveis */
+    gap: 25px; /* Aumenta o espaçamento entre as imagens */
+    padding: 0 20px;
+    max-width: 1200px; /* Define uma largura máxima para a galeria */
+    margin: 0 auto; /* Centraliza a galeria na página */
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px; /* Altura fixa para as imagens da galeria */
+    object-fit: cover; /* Garante que a imagem cubra a área, cortando se necessário */
+    display: block; /* Remove o espaço extra abaixo das imagens */
+    border: 1px solid #333; /* Borda sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para as imagens */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Transição para zoom e sombra */
+}
+
+.galeria img:hover {
+    transform: scale(1.02); /* Leve zoom no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada no hover */
+}
+
+/* Estilo para a seção "Lain Series" que tem uma única imagem */
+.gallery-single-item {
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px; /* Largura máxima para a imagem única */
+    margin: 0 auto;
+}
+
+.gallery-single-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.gallery-single-item img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Rodapé */
+footer {
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 40px 15px; /* Mais padding no rodapé */
+    font-size: 0.9rem;
+    line-height: 1.8; /* Melhora a leitura */
+    border-top: 1px solid #222;
+}
+
+footer p {
+    margin: 5px 0; /* Reduz o espaçamento entre os parágrafos no rodapé */
+}
+
+footer a {
+    color: #ccc;
+    font-weight: bold;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 6rem;
+    }
+    header h2 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 80vh; /* Altura do header em telas menores */
+    }
+    header h1 {
+        font-size: 4.5rem;
+        padding: 0 15px;
+    }
+    header h2 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+    }
+    nav a {
+        margin: 0 12px;
+        font-size: 0.95rem;
+    }
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 0 15px;
+    }
+    .galeria img {
+        height: 200px; /* Altura menor para imagens da galeria */
+    }
+    section {
+        padding: 60px 15px;
+    }
+    footer {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 70vh;
+    }
+    header h1 {
+        font-size: 2.8rem;
+    }
+    header h2 {
+        font-size: 1.3rem;
+    }
+    header .contato-topo {
+        bottom: 15px;
+        font-size: 0.85rem;
+        padding: 10px 18px;
+    }
+    nav {
+        padding: 10px 0;
+    }
+    nav a {
+        margin: 0 8px;
+        font-size: 0.85rem;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .galeria {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .galeria img {
+        height: auto; /* Altura automática para evitar cortes em imagens verticais */
+    }
+    section {
+        padding: 40px 10px;
+    }
+    footer {
+        padding: 20px 5px;
+        font-size: 0.8rem;
+    }
+}

@@ -94,6 +94,35 @@ section {
     background-color: #0d0d0d; /* Fundo ligeiramente diferente para as seções */
     border-bottom: 1px solid #222; /* Linha divisória sutil entre seções */
     position: relative; /* Necessário para posicionamento de elementos filhos */
+    /* Estilos base para imagem de fundo em todas as seções */
+    background-position: center;
+    background-size: cover; /* Garante que a imagem preencha a seção */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional: faz o fundo "parar" enquanto o conteúdo rola */
+    min-height: 60vh; /* Altura mínima para ver a imagem de fundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overlay para todas as seções */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay escuro */
+    z-index: 1; /* Garante que o overlay fique abaixo do conteúdo */
+}
+
+/* Conteúdo das seções deve estar acima do overlay */
+section > * {
+    position: relative;
+    z-index: 2;
 }
 
 section:last-of-type {
@@ -107,157 +136,130 @@ h2 {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase; /* Deixa os títulos em maiúsculas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra para destacar o texto sobre o fundo */
 }
 
-/* Título sobreposto para Lain Series (e outras seções que usarem essa estrutura) */
-.section-with-background {
-    background: url('lain_series/lain1.jpg') center/cover no-repeat; /* Imagem de fundo */
-    height: 80vh; /* Altura da seção */
-    display: flex;
-    flex-direction: column; /* Permite organizar itens em coluna */
-    justify-content: center;
-    align-items: center;
+
+/* Imagens de fundo para cada seção da página inicial (index.html) */
+#lain-series-home {
+    background-image: url('lain_series/lain1.jpg'); /* Altere 'caminho/para/lain_capa.jpg' pela imagem que quiser */
+}
+
+#palato-home {
+    background-image: url('palato/palato0.jpg'); /* Altere 'caminho/para/palato_capa.jpg' */
+}
+
+#night-life-home {
+    background-image: url('night1.JPG'); /* Altere 'caminho/para/night_capa.jpg' */
+}
+
+#cianotype-home {
+    background-image: url('cianotipia/cianotipia0.jpg'); /* Altere 'caminho/para/cianotype_capa.jpg' */
+}
+
+#visual-expressions-home {
+    background-image: url('ve1.jpg'); /* Altere 'caminho/para/visual_expressions_capa.jpg' */
+}
+
+
+/* Estilos para a seção Lain Series na página inicial, agora mais genérica */
+.gallery-preview-section {
+    padding: 80px 20px;
+    background-color: transparent; /* A imagem de fundo agora é na seção */
+    border-bottom: 1px solid #222;
     text-align: center;
-    color: #fff;
-    padding: 0; /* Remove padding padrão da section */
-    border-bottom: none; /* Remove borda da section padrão */
+    min-height: 70vh; /* Aumenta a altura mínima para destacar o fundo */
 }
 
-.section-with-background .section-overlay {
-    background: rgba(0, 0, 0, 0.5); /* Overlay escuro para o texto ser legível */
+.gallery-preview-section h2 {
+    margin-bottom: 40px;
+}
+
+.gallery-preview-link {
+    display: inline-block;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-preview-link img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-preview-link:hover img {
+    transform: scale(1.05);
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Adiciona padding para conteúdo interno */
-    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
-}
-
-.section-with-background h2 {
-    font-size: 5rem; /* Tamanho grande para o título sobreposto */
-    color: red; /* Cor do título */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
-    margin-bottom: 20px; /* Espaço abaixo do título */
-}
-
-.section-with-background .gallery-single-item {
-    padding: 0; /* Remove padding */
-    max-width: 600px; /* Largura máxima para a imagem principal, se houver */
-    margin: 0; /* Remove margem */
-}
-
-.section-with-background .gallery-single-item img {
-    max-height: 400px; /* Ajusta a altura da imagem para não ser muito grande */
-    width: auto; /* Mantém a largura proporcional */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-    border: 2px solid #fff; /* Borda branca para destacar */
-    transition: transform 0.3s ease;
-}
-
-.section-with-background .gallery-single-item img:hover {
-    transform: scale(1.05);
-}
-
-
-/* Galeria de Imagens (Ajustes para miniaturas sem corte) */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas flexíveis */
-    gap: 25px; /* Aumenta o espaçamento entre as imagens */
-    padding: 0 20px;
-    max-width: 1200px; /* Define uma largura máxima para a galeria */
-    margin: 0 auto; /* Centraliza a galeria na página */
-}
-
-.galeria a {
-    display: flex; /* Transforma o link em um flex container */
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a1a; /* Fundo para as miniaturas */
-    border: 1px solid #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Garante que nada transborde */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    padding: 10px; /* Espaço interno para a imagem */
-    height: 250px; /* Altura fixa para o container da miniatura */
-}
-
-.galeria a:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
-
-.galeria img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
-    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
-    width: auto; /* Mantém a proporção da largura */
-    height: auto; /* Mantém a proporção da altura */
-    object-fit: contain; /* ESSENCIAL: Garante que a imagem se encaixe no container sem ser cortada, adicionando espaço vazio se necessário */
-    display: block; /* Remove o espaço extra abaixo das imagens */
-    border: none; /* Remove qualquer borda extra na imagem em si */
-    box-shadow: none; /* Remove sombra extra na imagem em si */
-}
-
-
-/* Rodapé */
-footer {
-    background: #111;
-    color: #777;
-    text-align: center;
-    padding: 40px 15px; /* Mais padding no rodapé */
-    font-size: 0.9rem;
-    line-height: 1.8; /* Melhora a leitura */
-    border-top: 1px solid #222;
-}
-
-footer p {
-    margin: 5px 0; /* Reduz o espaçamento entre os parágrafos no rodapé */
-}
-
-footer a {
-    color: #ccc;
+    font-size: 2.2rem;
     font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    pointer-events: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.gallery-preview-link:hover .preview-overlay {
+    opacity: 1;
 }
 
 /* --- Estilos para as Páginas de Galeria Completas (ex: lain.html, palato.html) --- */
 
 .back-link {
-    margin-top: -30px; /* Reduz espaço entre título e link */
+    margin-top: -30px;
     margin-bottom: 40px;
     font-size: 1.1rem;
 }
 
 .back-link a {
-    color: #007bff; /* Um azul para link de voltar, pode ser ajustado */
+    color: #007bff;
     font-weight: bold;
 }
 
 .back-link a:hover {
-    color: red; /* Destaque no hover */
+    color: red;
     text-decoration: underline;
 }
 
 .galeria-full-page {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Mesmas regras das miniaturas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     padding: 0 20px;
     max-width: 1200px;
-    margin: 0 auto 80px auto; /* Mais margem inferior */
+    margin: 0 auto 80px auto;
 }
 
 .galeria-full-page a {
-    display: flex;
+    display: flex; /* Transforma o link em um flex container */
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* REMOVIDO: background-color: #1a1a1a; */
+    /* REMOVIDO: border: 1px solid #333; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Mantém a sombra para um leve destaque */
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    padding: 10px;
+    padding: 0px; /* Reduz padding para que o fundo desapareça, e a imagem encoste nas bordas do container */
     height: 250px; /* Altura fixa para o container da imagem completa */
 }
 
@@ -277,66 +279,25 @@ footer a {
     box-shadow: none;
 }
 
-/* --- Estilos para as Seções de Prévia na Página Inicial (index.html) --- */
-.gallery-preview-section {
-    padding: 80px 20px;
-    background-color: #0d0d0d;
-    border-bottom: 1px solid #222;
-    text-align: center; /* Centraliza o conteúdo da seção */
+/* Rodapé */
+footer {
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 40px 15px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    border-top: 1px solid #222;
 }
 
-.gallery-preview-section h2 {
-    margin-bottom: 40px; /* Espaço para o título */
+footer p {
+    margin: 5px 0;
 }
 
-.gallery-preview-link {
-    display: inline-block; /* Permite controlar largura e margem */
-    position: relative;
-    max-width: 800px; /* Limita a largura da prévia */
-    margin: 0 auto; /* Centraliza a prévia */
-    overflow: hidden;
-    border: 2px solid #333;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery-preview-link img {
-    width: 100%;
-    height: 400px; /* Altura fixa para a imagem de prévia */
-    object-fit: cover; /* Recorta a imagem para preencher a área, mas é uma imagem de capa, não miniatura da galeria */
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.gallery-preview-link:hover img {
-    transform: scale(1.05); /* Leve zoom na imagem no hover */
-}
-
-.preview-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Overlay escuro */
-    color: white;
-    display: flex;
-    flex-direction: column; /* Para centralizar texto verticalmente */
-    justify-content: center;
-    align-items: center;
-    font-size: 2.2rem;
+footer a {
+    color: #ccc;
     font-weight: bold;
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.3s ease;
-    text-transform: uppercase;
-    pointer-events: none; /* Garante que o clique passe para o link */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
-
-.gallery-preview-link:hover .preview-overlay {
-    opacity: 1; /* Fica visível no hover */
-}
-
 
 /* --- Media Queries para Responsividade --- */
 
@@ -351,6 +312,9 @@ footer a {
     h2 { /* Títulos de seção */
         font-size: 3.8rem;
     }
+    section {
+        min-height: 50vh; /* Altura mínima ajustada */
+    }
     .galeria {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas um pouco menores */
         gap: 20px;
@@ -361,11 +325,8 @@ footer a {
     .galeria-full-page a {
         height: 200px;
     }
-    .section-with-background h2 {
-        font-size: 4rem;
-    }
-    .section-with-background .gallery-single-item img {
-        max-height: 350px;
+    .gallery-preview-section {
+        min-height: 60vh; /* Ajuste para a prévia da galeria */
     }
     .gallery-preview-link img {
         height: 350px;
@@ -378,7 +339,7 @@ footer a {
 /* Telas até 768px (Tablets em modo retrato, smartphones grandes) */
 @media (max-width: 768px) {
     header {
-        height: 70vh; /* Reduz altura do cabeçalho */
+        height: 70vh;
     }
     header h1 {
         font-size: 4rem;
@@ -405,15 +366,16 @@ footer a {
     }
     section {
         padding: 50px 15px;
+        min-height: 40vh; /* Altura mínima para mobile */
     }
     .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Mais colunas em telas pequenas */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 15px;
         padding: 0 10px;
     }
     .galeria a {
         height: 150px; /* Altura menor para miniaturas */
-        padding: 5px;
+        padding: 0px; /* Removido padding */
     }
     .galeria-full-page {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -422,17 +384,10 @@ footer a {
     }
     .galeria-full-page a {
         height: 150px;
-        padding: 5px;
+        padding: 0px; /* Removido padding */
     }
-    .section-with-background {
-        height: 60vh;
-    }
-    .section-with-background h2 {
-        font-size: 3rem;
-        margin-bottom: 15px;
-    }
-    .section-with-background .gallery-single-item img {
-        max-height: 250px;
+    .gallery-preview-section {
+        min-height: 50vh; /* Ajuste para a prévia da galeria */
     }
     .gallery-preview-link img {
         height: 250px;
@@ -452,7 +407,7 @@ footer a {
         height: 60vh;
     }
     header h1 {
-        font-size: 2.5rem; /* Nome ainda menor */
+        font-size: 2.5rem;
     }
     header h2 {
         font-size: 1.1rem;
@@ -468,36 +423,30 @@ footer a {
     nav a {
         margin: 0 6px;
         font-size: 0.8rem;
-        white-space: normal; /* Permite quebra de linha se necessário */
+        white-space: normal;
     }
-    h2 { /* Títulos de seção */
+    h2 {
         font-size: 2rem;
         margin-bottom: 20px;
     }
     section {
         padding: 30px 10px;
+        min-height: 35vh;
     }
     .galeria, .galeria-full-page {
-        grid-template-columns: 1fr; /* Uma coluna apenas */
+        grid-template-columns: 1fr;
         gap: 10px;
         padding: 0 5px;
     }
     .galeria a, .galeria-full-page a {
-        height: 180px; /* Altura ajustada para visualização vertical */
-        padding: 5px;
+        height: 180px;
+        padding: 0px; /* Removido padding */
     }
-    .section-with-background {
-        height: 50vh;
-    }
-    .section-with-background h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-    .section-with-background .gallery-single-item img {
-        max-height: 200px;
+    .gallery-preview-section {
+        min-height: 40vh;
     }
     .gallery-preview-link img {
-        height: 200px; /* Altura da prévia em telas pequenas */
+        height: 200px;
     }
     .preview-overlay {
         font-size: 1.2rem;
@@ -529,9 +478,6 @@ footer a {
     }
     .galeria a, .galeria-full-page a {
         height: 160px;
-    }
-    .section-with-background h2 {
-        font-size: 1.8rem;
     }
     .preview-overlay {
         font-size: 1rem;

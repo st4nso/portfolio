@@ -39,7 +39,7 @@ nav a {
 /* Header (Cabeçalho principal) */
 header {
     height: 100vh;
-    background: url('impressoes/impressoes 8.JPG') center/cover no-repeat;
+    background: url('impressoes/impressoes 8.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +105,6 @@ header .contato-topo a:hover {
     align-items: center;
 }
 
-/* Overlay para todas as seções */
 .gallery-preview-section::before {
     content: '';
     position: absolute;
@@ -132,17 +131,16 @@ h2 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Imagens de fundo para cada seção da página inicial (index.html) */
 #lain-series-home {
     background-image: url('lain_series/lain3.jpg');
 }
 
 #palato-home {
-    background-image: url('palato/palato0.jpg');
+    background-image: url('palato/palato13.jpg');
 }
 
 #night-life-home {
-    background-image: url('night_life/night26.JPG');
+    background-image: url('night_life/night42.JPG');
 }
 
 #cianotype-home {
@@ -202,7 +200,6 @@ h2 {
 }
 
 /* --- ESTILOS PARA AS PÁGINAS DE GALERIA COMPLETAS --- */
-/* Esta é a nova classe para o fundo branco */
 .galeria-container {
     background-color: #fff;
     padding: 40px 0;
@@ -235,9 +232,10 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    /* Adicionado fundo branco para as miniaturas ficarem visíveis */
-    background-color: #fff;
-    padding: 5px;
+    background-color: #eee; /* Cor de fundo para as miniaturas */
+    display: flex; /* Adicionado para centralizar a imagem */
+    align-items: center; /* Adicionado para centralizar a imagem */
+    justify-content: center; /* Adicionado para centralizar a imagem */
 }
 
 .galeria-full-page a:hover {
@@ -248,8 +246,7 @@ h2 {
 .galeria-full-page img {
     height: 100%;
     width: auto;
-    /* Alterado para preencher o fundo branco e não ter bordas pretas */
-    object-fit: cover;
+    object-fit: contain; /* Alterado para contain para manter a proporção e evitar cortes */
     display: block;
     border: none;
     box-shadow: none;

@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Expressions - Lucas Stanso</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="palato.html">Palato</a>
-    <a href="meia_volta.html">Meia Volta</a>
-    <a href="lain.html">Lain Series</a>
-    <a href="radio_club.html">Radio Club</a>
-    <a href="cianotype.html">Cianotype</a>
-    <a href="night-life.html">Night Life</a>
-    <a href="visual-expressions.html">Visual Expressions</a>
-</nav>
+<body class="gallery-page">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="palato.html">Palato</a>
+        <a href="meia_volta.html">Meia Volta</a>
+        <a href="lain.html">Lain Series</a>
+        <a href="radio_club.html">Radio Club</a>
+        <a href="cianotype.html">Cianotype</a>
+        <a href="night-life.html">Night Life</a>
+        <a href="visual-expressions.html">Visual Expressions</a>
+    </nav>
 
-    <section id="visual-expressions-content">
+    <section id="gallery-content">
         <h2>Visual Expressions</h2>
         <p class="back-link"><a href="index.html#visual-expressions-home">← Voltar</a></p>
-        
         <div class="galeria-container">
-        <div class="galeria-full-page">
-            <a href="ve1.JPG" data-lightbox="visual-expressions-galeria" data-title="Visual Expression - Imagem 1"><img src="ve1.JPG" alt="Visual Expression Imagem 1"></a>
-            <a href="ve2.JPG" data-lightbox="visual-expressions-galeria" data-title="Visual Expression - Imagem 2"><img src="ve2.JPG" alt="Visual Expression Imagem 2"></a>
+            <div class="galeria-full-page">
+                <a href="visual-expressions/ve1.jpg" data-lightbox="galeria" data-title="Visual Expressions 1"><img src="visual-expressions/ve1.jpg" alt="Visual Expressions 1"></a>
+                <a href="visual-expressions/ve2.jpg" data-lightbox="galeria" data-title="Visual Expressions 2"><img src="visual-expressions/ve2.jpg" alt="Visual Expressions 2"></a>
+                <a href="visual-expressions/ve3.jpg" data-lightbox="galeria" data-title="Visual Expressions 3"><img src="visual-expressions/ve3.jpg" alt="Visual Expressions 3"></a>
+                <a href="visual-expressions/ve4.jpg" data-lightbox="galeria" data-title="Visual Expressions 4"><img src="visual-expressions/ve4.jpg" alt="Visual Expressions 4"></a>
+                <a href="visual-expressions/ve5.jpg" data-lightbox="galeria" data-title="Visual Expressions 5"><img src="visual-expressions/ve5.jpg" alt="Visual Expressions 5"></a>
+                <a href="visual-expressions/ve6.jpg" data-lightbox="galeria" data-title="Visual Expressions 6"><img src="visual-expressions/ve6.jpg" alt="Visual Expressions 6"></a>
+                <a href="visual-expressions/ve7.jpg" data-lightbox="galeria" data-title="Visual Expressions 7"><img src="visual-expressions/ve7.jpg" alt="Visual Expressions 7"></a>
+                <a href="visual-expressions/ve8.jpg" data-lightbox="galeria" data-title="Visual Expressions 8"><img src="visual-expressions/ve8.jpg" alt="Visual Expressions 8"></a>
+                <a href="visual-expressions/ve9.jpg" data-lightbox="galeria" data-title="Visual Expressions 9"><img src="visual-expressions/ve9.jpg" alt="Visual Expressions 9"></a>
+                <a href="visual-expressions/ve10.jpg" data-lightbox="galeria" data-title="Visual Expressions 10"><img src="visual-expressions/ve10.jpg" alt="Visual Expressions 10"></a>
+            </div>
         </div>
     </section>
 
@@ -41,7 +49,13 @@
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true
-        })
+        });
+        document.querySelectorAll('.galeria-full-page').forEach(element => {
+            element.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                element.scrollLeft += e.deltaY;
+            });
+        });
     </script>
 </body>
 </html>

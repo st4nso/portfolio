@@ -3,71 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio - Lucas Stanso</title>
+    <title>Lucas Stanso - Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav>
-        <a href="lain.html">Lain Series</a>
+        <a href="index.html">Início</a>
         <a href="palato.html">Palato</a>
-        <a href="night-life.html">Night Life</a>
+        <a href="meia_volta.html">Meia Volta</a>
+        <a href="lain.html">Lain Series</a>
         <a href="cianotype.html">Cianotype</a>
+        <a href="night-life.html">Night Life</a>
         <a href="visual-expressions.html">Visual Expressions</a>
     </nav>
 
-    <header id="intro">
+    <header>
         <h1>Lucas Stanso</h1>
-        <h2>Photography Portfolio</h2>
+        <h2>Fotografia</h2>
         <div class="contato-topo">
-            Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a>
+            <a href="https://instagram.com/_stanso" target="_blank">Instagram</a> • 
+            <a href="https://wa.me/5513996827109" target="_blank">WhatsApp</a>
         </div>
     </header>
 
-    <section id="lain-series-home" class="gallery-preview-section">
-        <h2>Lain Series</h2>
-        <a href="lain.html" class="gallery-preview-link">
-            <img src="lain_series/lain3.jpg" alt="Capa Lain-Gika">
-            <div class="preview-overlay">See All</div>
-        </a>
-    </section>
-
-    <section id="palato-home" class="gallery-preview-section">
+    <section class="gallery-preview-section" id="palato-home">
         <h2>Palato</h2>
         <a href="palato.html" class="gallery-preview-link">
-            <img src="palato/palato8.jpg" alt="Capa Palato">
-            <div class="preview-overlay">See All</div>
+            <img src="palato/palato0.JPG" alt="Pré-visualização da galeria Palato">
+            <div class="preview-overlay">
+                Ver Galeria
+            </div>
         </a>
     </section>
 
-    <section id="night-life-home" class="gallery-preview-section">
-        <h2>Night Life</h2>
-        <a href="night-life.html" class="gallery-preview-link">
-            <img src="night_life/night8.jpg" alt="Capa Night Life">
-            <div class="preview-overlay">See All</div>
+    <section class="gallery-preview-section" id="meia-volta-home">
+        <h2>Meia Volta - Fontes ft. Franco, the Sir</h2>
+        <a href="meia_volta.html" class="gallery-preview-link">
+            <img src="meia_volta/meiavolta0.jpg" alt="Pré-visualização da galeria Meia Volta">
+            <div class="preview-overlay">
+                Ver Galeria
+            </div>
+        </a>
+    </section>
+    
+    <section class="gallery-preview-section" id="lain-series-home">
+        <h2>Lain Series</h2>
+        <a href="lain.html" class="gallery-preview-link">
+            <img src="lain_series/lain1.JPG" alt="Pré-visualização da galeria Lain Series">
+            <div class="preview-overlay">
+                Ver Galeria
+            </div>
         </a>
     </section>
 
-    <section id="cianotype-home" class="gallery-preview-section">
+    <section class="gallery-preview-section" id="cianotype-home">
         <h2>Cianotype</h2>
         <a href="cianotype.html" class="gallery-preview-link">
-            <img src="cianotipia/cianotipia7.jpg" alt="Capa Cianotype">
-            <div class="preview-overlay">See All</div>
+            <img src="cianotipia/cianotipia0.JPG" alt="Pré-visualização da galeria Cianotype">
+            <div class="preview-overlay">
+                Ver Galeria
+            </div>
         </a>
     </section>
 
-    <section id="visual-expressions-home" class="gallery-preview-section">
+    <section class="gallery-preview-section" id="night-life-home">
+        <h2>Night Life</h2>
+        <a href="night-life.html" class="gallery-preview-link">
+            <img src="night_life/night26.JPG" alt="Pré-visualização da galeria Night Life">
+            <div class="preview-overlay">
+                Ver Galeria
+            </div>
+        </a>
+    </section>
+
+    <section class="gallery-preview-section" id="visual-expressions-home">
         <h2>Visual Expressions</h2>
         <a href="visual-expressions.html" class="gallery-preview-link">
-            <img src="ve1.JPG" alt="Capa Visual Expressions">
-            <div class="preview-overlay">See All</div>
+            <img src="ve1.JPG" alt="Pré-visualização da galeria Visual Expressions">
+            <div class="preview-overlay">
+                Ver Galeria
+            </div>
         </a>
     </section>
 
     <footer>
         <p>&copy; 2025 Lucas Stanso. Todos os direitos reservados.</p>
-        <p>Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a> </p>
+        <p>Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a> • WhatsApp: <a href="https://wa.me/5513996827109" target="_blank">+55 13 99682-7109</a></p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
@@ -75,7 +98,7 @@
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true
-        })
+        });
     </script>
 </body>
 </html>

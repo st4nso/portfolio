@@ -22,18 +22,20 @@
 
     <section id="gallery-content">
         <h2>Lain Series</h2>
-        <p class="back-link"><a href="index.html#[SECAO_DA_HOME]">← Voltar</a></p>
+        <p class="back-link"><a href="index.html#lain-series-home">← Voltar</a></p>
         <div class="galeria-container">
             <div class="galeria-full-page">
-                </div>
-            <a href="lain_series/lain1.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 1"><img src="lain_series/lain1.jpg" alt="Lain Series Imagem 1"></a>
-            <a href="lain_series/lain2.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 2"><img src="lain_series/lain2.jpg" alt="Lain Series Imagem 2"></a>
-            <a href="lain_series/lain3.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 3"><img src="lain_series/lain3.jpg" alt="Lain Series Imagem 3"></a>
-            <a href="lain_series/lain4.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 4"><img src="lain_series/lain4.jpg" alt="Lain Series Imagem 4"></a>
-            <a href="lain_series/lain5.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 4"><img src="lain_series/lain5.jpg" alt="Lain Series Imagem 5"></a>
-            <a href="lain_series/lain6.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 4"><img src="lain_series/lain6.jpg" alt="Lain Series Imagem 6"></a>
-            <a href="lain_series/lain7.jpg" data-lightbox="lain-galeria" data-title="Lain Series - Imagem 4"><img src="lain_series/lain7.jpg" alt="Lain Series Imagem 7"></a>
+                <a href="lain_series/lain1.jpg" data-lightbox="galeria" data-title="Lain Series 1"><img src="lain_series/lain1.jpg" alt="Lain Series 1"></a>
+                <a href="lain_series/lain2.jpg" data-lightbox="galeria" data-title="Lain Series 2"><img src="lain_series/lain2.jpg" alt="Lain Series 2"></a>
+                <a href="lain_series/lain3.jpg" data-lightbox="galeria" data-title="Lain Series 3"><img src="lain_series/lain3.jpg" alt="Lain Series 3"></a>
+                <a href="lain_series/lain4.jpg" data-lightbox="galeria" data-title="Lain Series 4"><img src="lain_series/lain4.jpg" alt="Lain Series 4"></a>
+                <a href="lain_series/lain5.jpg" data-lightbox="galeria" data-title="Lain Series 5"><img src="lain_series/lain5.jpg" alt="Lain Series 5"></a>
+                <a href="lain_series/lain6.jpg" data-lightbox="galeria" data-title="Lain Series 6"><img src="lain_series/lain6.jpg" alt="Lain Series 6"></a>
+                <a href="lain_series/lain7.jpg" data-lightbox="galeria" data-title="Lain Series 7"><img src="lain_series/lain7.jpg" alt="Lain Series 7"></a>
             </div>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 Lucas Stanso. Todos os direitos reservados.</p>
         <p>Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a></p>
@@ -45,8 +47,6 @@
             'resizeDuration': 200,
             'wrapAround': true
         });
-
-        // SCRIPT PARA ROLAGEM HORIZONTAL
         document.querySelectorAll('.galeria-full-page').forEach(element => {
             element.addEventListener('wheel', (e) => {
                 e.preventDefault();

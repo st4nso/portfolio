@@ -39,6 +39,7 @@ nav a {
 /* Header (Cabeçalho principal) */
 header {
     height: 100vh;
+    /* --- CAMINHO DA IMAGEM CORRIGIDO AQUI (extensão em minúsculo) --- */
     background: url('impressoes 8.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -132,7 +133,7 @@ h2 {
 }
 
 #lain-series-home {
-    background-image: url('lain_series/lain6.jpg');
+    background-image: url('lain_series/lain2.jpg');
 }
 
 #palato-home {
@@ -144,11 +145,11 @@ h2 {
 }
 
 #cianotype-home {
-    background-image: url('cianotipia/cianotipia3.jpg');
+    background-image: url('cianotipia/cianotipia5.jpg');
 }
 
 #visual-expressions-home {
-    background-image: url('ve1.JPG');
+    background-image: url('ve1.jpg');
 }
 
 .gallery-preview-link {
@@ -232,10 +233,10 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    background-color: #eee; /* Cor de fundo para as miniaturas */
-    display: flex; /* Adicionado para centralizar a imagem */
-    align-items: center; /* Adicionado para centralizar a imagem */
-    justify-content: center; /* Adicionado para centralizar a imagem */
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .galeria-full-page a:hover {
@@ -246,7 +247,7 @@ h2 {
 .galeria-full-page img {
     height: 100%;
     width: auto;
-    object-fit: contain; /* Alterado para contain para manter a proporção e evitar cortes */
+    object-fit: contain;
     display: block;
     border: none;
     box-shadow: none;

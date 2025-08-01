@@ -131,6 +131,9 @@ h2 {
     text-transform: uppercase;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+radio-club-home {
+    background-image: url('radio_club/radioclub0.jpg');
+}
 
 #lain-series-home {
     background-image: url('lain_series/lain2.jpg');

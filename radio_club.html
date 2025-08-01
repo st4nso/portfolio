@@ -52,20 +52,28 @@
             <a href="radio_club/radio22.jpg" data-lightbox="galeria" data-title="Radio Club 22"><img src="radio_club/radio22.jpg" alt="Radio Club 22"></a>
             <a href="radio_club/radio23.jpg" data-lightbox="galeria" data-title="Radio Club 23"><img src="radio_club/radio23.jpg" alt="Radio Club 23"></a>
             <a href="radio_club/radio24.jpg" data-lightbox="galeria" data-title="Radio Club 24"><img src="radio_club/radio24.jpg" alt="Radio Club 24"></a>
-        </div>
-    </section>
+         </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Lucas Stanso. Todos os direitos reservados.</p>
-        <p>Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a></p>
-    </footer>
+     <footer>
+        <p>&copy; 2025 Lucas Stanso. Todos os direitos reservados.</p>
+        <p>Instagram: <a href="https://instagram.com/_stanso" target="_blank">@_stanso</a></p>
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-    <script>
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+
+        // SCRIPT PARA ROLAGEM HORIZONTAL
+        document.querySelectorAll('.galeria-full-page').forEach(element => {
+            element.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                element.scrollLeft += e.deltaY;
+            });
+        });
+    </script>
 </body>
 </html>

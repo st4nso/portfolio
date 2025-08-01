@@ -39,7 +39,7 @@ nav a {
 /* Header (Cabeçalho principal) */
 header {
     height: 100vh;
-    background: url('impressoes/impressoes 8.jpg') center/cover no-repeat;
+    background: url('impressoes 8.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +132,7 @@ h2 {
 }
 
 #lain-series-home {
-    background-image: url('lain_series/lain3.jpg');
+    background-image: url('lain_series/lain6.jpg');
 }
 
 #palato-home {

@@ -8,6 +8,12 @@ body {
     overflow-x: hidden;
 }
 
+/* --- Correção para o Fundo Branco nas Galerias --- */
+/* Esta classe será adicionada ao <body> dos arquivos de galeria */
+body.gallery-page {
+    background-color: #fff;
+}
+
 a {
     color: #ccc;
     text-decoration: none;
@@ -22,19 +28,25 @@ a:hover {
 nav {
     background: #111;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* --- Alterado para melhor encaixe na navegação --- */
 nav a {
-    margin: 0 12px;
+    margin: 0 8px;
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #222;
+    color: red;
 }
 
 /* Header (Cabeçalho principal) */
@@ -173,8 +185,7 @@ h2 {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    /* --- Adicionado para corrigir a borda --- */
-    display: block; 
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -209,9 +220,9 @@ h2 {
 
 /* --- ESTILOS PARA AS PÁGINAS DE GALERIA COMPLETAS --- */
 .galeria-container {
-    background-color: #fff;
     padding: 40px 0;
     margin: 0;
+    color: #333; /* Cor do texto dentro da galeria */
 }
 
 .galeria-full-page {
@@ -346,8 +357,9 @@ footer a {
         padding: 10px 0;
     }
     nav a {
-        margin: 0 10px;
-        font-size: 0.9rem;
+        margin: 0 8px;
+        font-size: 0.85rem;
+        padding: 5px 8px;
     }
     h2 {
         font-size: 2.8rem;
@@ -395,9 +407,10 @@ footer a {
         padding: 8px 0;
     }
     nav a {
-        margin: 0 6px;
-        font-size: 0.8rem;
+        margin: 0 4px;
+        font-size: 0.75rem;
         white-space: normal;
+        padding: 4px 6px;
     }
     h2 {
         font-size: 2rem;
@@ -438,8 +451,9 @@ footer a {
         font-size: 1rem;
     }
     nav a {
-        font-size: 0.75rem;
-        margin: 0 4px;
+        font-size: 0.7rem;
+        margin: 0 3px;
+        padding: 3px 5px;
     }
     h2 {
         font-size: 1.6rem;
